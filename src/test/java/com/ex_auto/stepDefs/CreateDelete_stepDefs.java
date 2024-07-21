@@ -1,10 +1,8 @@
 package com.ex_auto.stepDefs;
 
 import com.ex_auto.pages.EmployeeCreatePage;
-import com.ex_auto.pages.EmployeeDeletePage;
 import com.ex_auto.pages.EmployeeListPage;
 import com.ex_auto.pages.LoginPage;
-import com.ex_auto.utilities.BrowserUtils;
 import com.ex_auto.utilities.ConfigurationReader;
 import com.ex_auto.utilities.Driver;
 import io.cucumber.java.en.And;
@@ -17,7 +15,6 @@ public class CreateDelete_stepDefs {
     LoginPage loginPage = new LoginPage();
     EmployeeListPage employeeListPage = new EmployeeListPage();
     EmployeeCreatePage employeeCreatePage = new EmployeeCreatePage();
-    EmployeeDeletePage employeeDeletePage = new EmployeeDeletePage();
 
     @Given("I navigate to website")
     public void ıNavigateToWebsite() {

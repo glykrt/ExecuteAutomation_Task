@@ -4,9 +4,11 @@ import com.ex_auto.utilities.BrowserUtils;
 import com.ex_auto.utilities.Driver;
 
 import static org.junit.Assert.*;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,7 +33,8 @@ public class EmployeeListPage extends BasePage {
         searchInput.sendKeys(name);
         searchBtn.click();
     }
-    public void verifyEmployeeDisplayed(String name){
+
+    public void verifyEmployeeDisplayed(String name) {
         searchWithName(name);
         BrowserUtils.verifyElementDisplayed(emailInfo);
     }
@@ -48,7 +51,7 @@ public class EmployeeListPage extends BasePage {
         BrowserUtils.waitFor(2);
     }
 
-    public void verifyEmployeeNotDisplayed(String email){
+    public void verifyEmployeeNotDisplayed(String email) {
 
         List<String> employeeList = new ArrayList<>();
         for (WebElement row : employeeRows) {
