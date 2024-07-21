@@ -2,13 +2,10 @@ package com.ex_auto.pages;
 
 import com.ex_auto.utilities.BrowserUtils;
 import com.ex_auto.utilities.Driver;
-
 import static org.junit.Assert.*;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,17 +25,14 @@ public class EmployeeListPage extends BasePage {
     @FindBy(xpath = "//table/tbody/tr[2]/td[5]")
     public WebElement emailInfo;
 
-
     public void searchWithName(String name) {
         searchInput.sendKeys(name);
         searchBtn.click();
     }
-
     public void verifyEmployeeDisplayed(String name) {
         searchWithName(name);
         BrowserUtils.verifyElementDisplayed(emailInfo);
     }
-
     public void employeeDelete(String name) {
         searchWithName(name);
         try {
@@ -50,9 +44,7 @@ public class EmployeeListPage extends BasePage {
         employeeDeletePage.employeeDeleteBtn.click();
         BrowserUtils.waitFor(2);
     }
-
     public void verifyEmployeeNotDisplayed(String email) {
-
         List<String> employeeList = new ArrayList<>();
         for (WebElement row : employeeRows) {
             employeeList.add(row.getText());

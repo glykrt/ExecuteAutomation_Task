@@ -1,6 +1,6 @@
 Feature: As an administrator, I should be able to create a new employee and delete the new employee
 
-  @wip
+  @ready
   Scenario: Create a new employee and delete a new employee
     Given I navigate to website
     When I login as admin
